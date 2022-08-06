@@ -1,8 +1,7 @@
 # deep-learning-challenge
-### Deep Learning Charity Funding Predictor Project using hyper-tuned neural network.
-
 
 # Report on the Neural Network Model
+### Deep Learning Charity Funding Outcome Predictor Project using hyper-tuned Neural Network.
 
 ## Overview:
 
