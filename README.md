@@ -73,22 +73,22 @@ For the second model I decided to use `tanh` activation and 3 hidden layers with
 ![Screenshot 2022-08-06 at 23 06 17](https://user-images.githubusercontent.com/67019030/183267476-bcfa5db1-e9e1-48af-8472-f53f24344373.png)
 
 
-I experimented with increasing neurons and changing parameters to get a better accuracy but despite doing this both models came below the 75% threshold.
+I experimented with increasing nodes and neurons, with changing other parameters to get a better accuracy but despite doing this both models came below the 75% threshold.
 
 
 ### 3: Optimize the Model
 
-I decided to use an automated model optimizer to get the most accurate model possible by creating mehtod that creates a `keras` Sequential model using the `keras-tuner library` with hyperparametes options. 
+I decided to use an automated model optimizer to get the most accurate model possible by creating method that creates a `keras` Sequential model using the `keras-tuner library` with hyperparametes options. 
 ![Screenshot 2022-08-06 at 23 10 28](https://user-images.githubusercontent.com/67019030/183267573-22a806a6-8e10-4b08-bd50-70a9533866a1.png)
 Which will automatically tune the hyperpyrameters until it gets the most accurate model.
 ![Screenshot 2022-08-06 at 20 05 12](https://user-images.githubusercontent.com/67019030/183267609-9d4e0d27-2df0-49c9-81ee-4e4012978067.png)
  
- * The best model from the keras tuner method achieved 73% prediction accuracy using a sigmoid activation function with input neurons of 46, 5 hidden layers at a 51, 81, 71, 6, 41, 91 neurons split and 100 training epochs.
+ * The best model from the keras tuner method achieved 73% prediction accuracy using a sigmoid activation function with input node of 46, 5 hidden layers at a 51, 81, 71, 6, 41, 91 neurons split and 100 training epochs.
 ![Screenshot 2022-08-06 at 23 17 09](https://user-images.githubusercontent.com/67019030/183267670-219340f3-b526-4971-bbf2-9c1ab4349fc9.png)
 
 
 # Summary: 
 
-Like the first 2 models, the automatically optimized neural network trained model did not achieve the 75% target set for accuracy. Performing only slightly better at 73% vs 72%.
+Like the first 2 models, the automatically optimized neural network trained model did not achieve the 75% target set for accuracy. Performing only slightly better.
 Performance could be improved by using other machine learning techniques ands libraries. For example, by reducing dimensions (and noise) we could possible get a more accurate prediction of whether charity funding applicants will be successful in their ventures or not. We could also further reduce the input features and other data preprocessing steps.
 Random Forrest Classifier and Logistic Regression classification algorithm could be used here as both perform well in predicting the probability (outcome) of a binary target variable.
