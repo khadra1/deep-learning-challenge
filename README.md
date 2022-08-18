@@ -82,12 +82,25 @@ I decided to use an automated model optimizer to get the most accurate model pos
 Which will automatically tune the hyperpyrameters until it gets the most accurate model.
 ![Screenshot 2022-08-06 at 20 05 12](https://user-images.githubusercontent.com/67019030/183267609-9d4e0d27-2df0-49c9-81ee-4e4012978067.png)
  
- * The best model from the keras tuner method achieved 73% prediction accuracy using a sigmoid activation function with input node of 46, 5 hidden layers at a 51, 81, 71, 6, 41, 91 neurons split and 100 training epochs.
+ * The best model from the keras tuner method achieved 73% prediction accuracy using a sigmoid activation function with input node of 46, 6 hidden layers at a 51, 81, 71, 6, 41, 91 neurons split and 100 training epochs.
 ![Screenshot 2022-08-06 at 23 17 09](https://user-images.githubusercontent.com/67019030/183267670-219340f3-b526-4971-bbf2-9c1ab4349fc9.png)
+
+# Further and Final Optimization
+I kept the `Name` column for my final Optimized Model as I still hadn't reached the goal of 75% accuracy. Kepping the keras-tuner the same apart from lowering the epochs from 100 to 50 for time optimization.
+
+![Screenshot 2022-08-18 at 21 14 01](https://user-images.githubusercontent.com/67019030/185486209-afd1c3dd-cea3-49e6-84ef-3dbfb97aef80.png)
+
+
+## Final and best optimized model achieved 80% accuracy , which exceeds the 75% goal and is our best model.
+
+![Screenshot 2022-08-18 at 20 57 31](https://user-images.githubusercontent.com/67019030/185486450-61a6cc03-eed0-4cec-a628-095438c5590a.png)
+
+### All Top 3 Models were around the 80%.
+All had a sigmoid activation with different number of input nodes and hidden layers:
+
+![Screenshot 2022-08-18 at 20 57 10](https://user-images.githubusercontent.com/67019030/185484546-0086d851-a10a-4c6d-b65f-7ab2cf923b0e.png)
 
 
 # Summary: 
-
-Like the first 2 models, the automatically optimized neural network trained model did not achieve the 75% target set for accuracy. Performing only slightly better.
-Performance could be improved by using other machine learning techniques ands libraries. For example, by reducing dimensions (and noise) we could possible get a more accurate prediction of whether charity funding applicants will be successful in their ventures or not. We could also further reduce the input features and other data preprocessing steps.
-Random Forrest Classifier and Logistic Regression classification algorithm could be used here as both perform well in predicting the probability (outcome) of a binary target variable.
+The final automatically optimized neural network trained model from the keras tuner method achieved 80% prediction accuracy with a 0.45 loss, using a sigmoid activation function with input node of 76; 5 hidden layers at a 16, 21, 26, 11, 21, neurons split and 50 training epochs.  Performing better than the non automized model.
+Keeping the `Name` column was crucial in achieving and and going beyond the target. This shows the importance of the shape of your datasets before you preprocess it. 
